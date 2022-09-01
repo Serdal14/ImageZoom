@@ -10,13 +10,13 @@
 
 export default {
   name: 'App',
-  props:{
-    zoomSize:{
-      type:Number,
+  props: {
+    zoomSize: {
+      type: Number,
       default: 1,
     },
-    ImageUrl:{
-      type:String,
+    ImageUrl: {
+      type: String,
       default: '/default.jpg',
     }
   },
@@ -26,18 +26,18 @@ export default {
     },
     move(e) {
       let imageArea = this.$refs.imageArea,
-          zoomArea =  this.$refs.zoomArea,
+          zoomArea = this.$refs.zoomArea,
           style = zoomArea.style,
           x = e.clientX,
           y = e.clientY,
           imgWidth = imageArea.offsetWidth,
           imgHeight = imageArea.offsetHeight,
-          xperc = ((x/imgWidth) * 100),
-          yperc = ((y/imgHeight) * 100);
-      if(x > (.01 * imgWidth)) {
+          xperc = ((x / imgWidth) * 100),
+          yperc = ((y / imgHeight) * 100);
+      if (x > (.01 * imgWidth)) {
         xperc += (.15 * xperc);
       }
-      if(y >= (.01 * imgHeight)) {
+      if (y >= (.01 * imgHeight)) {
         yperc += (.15 * yperc);
       }
 
@@ -49,7 +49,7 @@ export default {
       style.transform = `scale(${2})`
 
     },
-    leaveImage(){
+    leaveImage() {
       this.$refs.zoomArea.style.opacity = 0;
     }
   }
@@ -63,6 +63,7 @@ export default {
   font-size: 1em;
   line-height: 100%;
 }
+
 .image-zoom-wrapper {
   width: 100%;
   height: 100%;
@@ -71,14 +72,16 @@ export default {
   .image {
     width: auto;
     object-fit: cover;
+
     &:hover {
       cursor: zoom-in;
     }
   }
+
   .zoomArea {
     width: 150px;
     height: 100px;
-    box-shadow: 0 5px 10px -2px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.3);
     pointer-events: none;
     position: absolute;
     opacity: 0;
