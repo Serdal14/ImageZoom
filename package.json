@@ -19,7 +19,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-library": "vue-cli-service build --target lib --name image-zoom ./src/install.js",
+    "build-library": "vue-cli-service build --target lib --name image-zoom-sa ./src/install.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
