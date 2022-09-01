@@ -1,4 +1,4 @@
-import ImageZoom from "./App.vue";
+import ImageZoom from "./ImageZoom.vue";
 
 const VueImageZoom = {
     install(Vue) {
