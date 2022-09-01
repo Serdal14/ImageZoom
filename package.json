@@ -1,6 +1,6 @@
 {
   "name": "image-zoom",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
   "description": "A simple vuejs Hello World plugin",
   "author": {
@@ -9,14 +9,13 @@
   },
   "repository": "https://github.com/Serdal14/ImageZoom",
   "bugs": "https://github.com/Serdal14/ImageZoom/issues",
+  "main" : ".dist/image-zoom.common.js",
   "keywords": [
     "image",
     "zoom"
   ],
   "license": "MIT",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist/*"],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
