@@ -1,7 +1,7 @@
 <template>
   <div class="image-zoom-wrapper">
     <div ref="imageArea" @mouseenter="hoverImage" @mousemove="move" @mouseleave="leaveImage" class="image">
-      <img src="/default.jpg" alt="default">
+      <img :src="imageUrl" alt="default">
       <div ref="zoomArea" style="" class="zoomArea"></div>
     </div>
   </div>
@@ -13,16 +13,20 @@ export default {
   props: {
     zoomSize: {
       type: Number,
-      default: 1,
+      default: 1.2,
+      min:1.2,
+      max:2.2
     },
-    ImageUrl: {
+    imageUrl: {
       type: String,
-      default: '/default.jpg',
+      default: require('./assets/images/default.jpg'),
     }
   },
   methods: {
     hoverImage() {
       this.$refs.zoomArea.style.opacity = 1;
+      this.$refs.zoomArea.style.background= `url('${this.imageUrl}') no-repeat #fff`;
+
     },
     move(e) {
       let imageArea = this.$refs.imageArea,
@@ -46,8 +50,7 @@ export default {
 
       style.left = (x - 75) + 'px';
       style.top = (y - 50) + 'px';
-      style.transform = `scale(${2})`
-
+      style.transform = `scale(${this.zoomSize})`;
     },
     leaveImage() {
       this.$refs.zoomArea.style.opacity = 0;
@@ -90,7 +93,7 @@ export default {
     border-radius: 10px;
     display: block;
     transition: opacity .2s;
-    background: url('assets/images/default.jpg') no-repeat #fff
+
   }
 }
 </style>
