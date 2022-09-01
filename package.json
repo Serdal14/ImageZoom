@@ -1,8 +1,8 @@
 {
-  "name": "image-zoom",
-  "version": "1.0.2",
+  "name": "image-zoom-sa",
+  "version": "1.0.3",
   "private": false,
-  "description": "A simple vuejs Hello World plugin",
+  "description": "Simple image zoom package",
   "author": {
     "name": "Serdal Akdoğan",
     "email": "serdalakdogan14@gmail.com"
