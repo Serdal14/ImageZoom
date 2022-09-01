@@ -1,6 +1,6 @@
 {
   "name": "image-zoom-sa",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": false,
   "description": "Simple image zoom package",
   "author": {
@@ -9,13 +9,15 @@
   },
   "repository": "https://github.com/Serdal14/ImageZoom",
   "bugs": "https://github.com/Serdal14/ImageZoom/issues",
-  "main" : ".dist/image-zoom-sa.common.js",
+  "main": ".dist/image-zoom-sa.common.js",
   "keywords": [
     "image",
     "zoom"
   ],
   "license": "MIT",
-  "files": ["dist/*"],
+  "files": [
+    "dist/*"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
