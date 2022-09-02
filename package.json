@@ -9,14 +9,15 @@
   },
   "repository": "https://github.com/Serdal14/ImageZoom",
   "bugs": "https://github.com/Serdal14/ImageZoom/issues",
-  "main": ".dist/image-zoom-sa.common.js",
+  "main": "dist/image-zoom-sa.common.js",
   "keywords": [
     "image",
     "zoom"
   ],
   "license": "MIT",
   "files": [
-    "dist/*"
+    "dist/",
+    "src/"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
